@@ -1,0 +1,19 @@
+.Wrapper { 
+    line-height: 25px;
+}
+
+.container {
+    justify-content: space-around;
+    display: flex; 
+
+}
+
+.label {
+    color: grey;
+}
+
+.ProgressBar li {
+    list-style: none;
+    text-align: center;
+    cursor: pointer; 
+}
