@@ -1,6 +1,6 @@
 import "./App.css";
 import Icons from "./Components/Icons";
-import ProgressIndicator from "./Components/ProgressIndicator"; 
+import ProgressIndicator from "./Components/ProgressIndicator";
 
 function App() {
   return (

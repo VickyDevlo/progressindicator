@@ -5,15 +5,15 @@ const ProgressIndicator = () => {
   const DataList = [
     {
       name: "Erik Erickson",
-      label: "Initial Requester",
+      Descnation: "Initial Requester",
     },
     {
       name: "Sally Summers",
-      label: "Supervisor",
+      Descnation: "Supervisor",
     },
     {
       name: "Matthew Devaney",
-      label: "Manager",
+      Descnation: "Manager",
     },
     {
       name: "Executive Team",
@@ -26,7 +26,7 @@ const ProgressIndicator = () => {
           <div key={index} className="Wrapper">
             <ul className="ProgressBar">
               <li>{item.name}</li>
-              <li className="label">{item.label}</li>
+              <li className="label">{item.Descnation}</li>
             </ul>
           </div>
         );
