@@ -1,33 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ProgressIndicator.css";
 
-const ProgressIndicator = () => {
+const ProgressIndicator = ({ clickHandler, active }) => {
   const DataList = [
     {
+      id: 1,
       name: "Erik Erickson",
-      Descnation: "Initial Requester",
+      Designation: "Initial Requester",
     },
     {
+      id: 2,
       name: "Sally Summers",
-      Descnation: "Supervisor",
+      Designation: "Supervisor",
     },
     {
+      id: 3,
       name: "Matthew Devaney",
-      Descnation: "Manager",
+      Designation: "Manager",
     },
     {
+      id: 4,
       name: "Executive Team",
     },
   ];
+
   return (
     <div className="container">
-      {DataList.map((item, index) => {
+      {DataList.map((item) => {
         return (
-          <div key={index} className="Wrapper">
+          <div key={item.id} className="Wrapper">
             <ul className="ProgressBar">
-              <li>{item.name}</li>
-              <li className="label">{item.Descnation}</li>
+              <li onClick={() => clickHandler(item.id)}>{item.name}</li>
+              <li className="label">{item.Designation}</li>
             </ul>
+
+            <div className="checkBoxWrapper">
+              {active >= item.id ? <div className="innerbox"></div> : ""}
+            </div>
           </div>
         );
       })}

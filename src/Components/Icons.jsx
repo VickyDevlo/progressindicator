@@ -1,38 +1,17 @@
 import React from "react";
+
 import "./Icons.css";
-import { BiUser } from "react-icons/bi";
 
-const Icons = ({ children }) => {
-    
-  const userIcon = <BiUser size={25} />;
-
-  const Json = [
-    {
-      icon: userIcon,
-    },
-    {
-      icon: userIcon,
-    },
-    {
-      icon: userIcon,
-    },
-    {
-      icon: userIcon,
-    },
-  ];
+const Icons = ({ children, variant }) => {
   return (
-    <div className="iconWrapper">
+    <>
       <div className="Line"></div>
       <div className="childWrapper">
-        {Json.map((list, i) => {
-          return (
-            <ul className="iconBar" key={i}>
-              <li className="iconList">{list.icon}</li>
-            </ul>
-          );
-        })}
+        <ul className="iconBar">
+          <li className={`iconList ${variant}`}>{children}</li>
+        </ul>
       </div>
-    </div>
+    </>
   );
 };
 
