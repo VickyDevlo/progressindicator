@@ -78,8 +78,8 @@
 .inactiveBox {
     width: 17px;
     height: 17px;
-    background-color: rgb(216, 216, 216);
-    border: 1px solid gray;
+    background-color: #dcdfe1;
+    border: 2px solid #fff;
     border: 2px solid #fff;
     position: absolute;
     bottom: -8px;
@@ -94,15 +94,15 @@
     border: 2px solid #fff;
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: 0;       
 }
 
 .vertical .inactiveBox {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: rgb(216, 216, 216);
-    border: 1px solid gray;
+    background-color: #dcdfe1;
+    border: 2px solid #fff;
     position: absolute;
     bottom: 0;
     right: 0;
