@@ -29,7 +29,7 @@ const ProgressIndicator = ({ variant }) => {
     setActive(id);
   };
   return (
-    <div className={`${variant}`}>
+    <div className={`${variant}`}> 
       {DataList.map((item) => {
         return (
           <div key={item.id}>

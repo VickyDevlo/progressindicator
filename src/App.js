@@ -5,7 +5,7 @@ function App() {
  
   return (
     <div className="App">
-      <ProgressIndicator variant="vertical"/>
+      <ProgressIndicator variant='vertical'/>
     </div>
   );
 }
