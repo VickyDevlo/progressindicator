@@ -1,12 +1,36 @@
-.Wrapper {
-    line-height: 22px;
-    position: relative;
-}
-
-.container {
+.horizontal {
     justify-content: space-around;
     display: flex;
+    line-height: 25px;
 
+}
+
+.vartical {
+    line-height: 25px;
+    position: relative
+}
+
+.horizontal::before {
+    content: "";
+    min-width: 983px;
+    height: 2px;
+    position: absolute;
+    z-index: -1;
+    background-color: #706e6e;
+    top: 91px;
+    left: 291px;
+}
+
+
+.vartical::before {
+    content: "";
+    min-width: 2px;
+    height: 379px;
+    position: absolute;
+    z-index: -1;
+    background-color: #706e6e;
+    top: 91px;
+    left: 572px;
 }
 
 .label {
@@ -16,19 +40,70 @@
 .ProgressBar li {
     list-style: none;
     text-align: center;
-    cursor: pointer;
 }
-.innerbox{
-    width: 20px;
-    height: 20px;
-    background-color: green;
+
+
+.Box {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(216, 216, 216);
+    border: 1px solid gray;
+    cursor: pointer;
+    position: relative;
+    bottom: 13px;
+    left: 70px;
+}
+
+.vartical .Box {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(216, 216, 216);
+    border: 1px solid gray;
+    position: relative;
+    bottom: -53px;
+    left: 547px;
+}
+
+.activeBox {
+    width: 17px;
+    height: 17px;
+    background-color: #00d76f;
+    border: 2px solid #fff;
     position: absolute;
-    bottom: 83px; 
-    right: 28px;
+    bottom: -8px;
+    right: -8px
 }
-/* 
-.checkBoxWrapper {
-    color: black;
-    font-size: 20px;
-    cursor: pointer;
-} */
+
+.inactiveBox {
+    width: 17px;
+    height: 17px;
+    background-color: rgb(216, 216, 216);
+    border: 1px solid gray;
+    border: 2px solid #fff;
+    position: absolute;
+    bottom: -8px;
+    right: -8px;
+}
+
+.vartical .activeBox {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #00d76f;
+    border: 2px solid #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.vartical .inactiveBox {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgb(216, 216, 216);
+    border: 1px solid gray;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

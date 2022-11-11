@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./ProgressIndicator.css";
 
-const ProgressIndicator = ({ clickHandler, active }) => {
+const ProgressIndicator = ({ variant }) => {
   const DataList = [
     {
       id: 1,
@@ -24,18 +24,24 @@ const ProgressIndicator = ({ clickHandler, active }) => {
     },
   ];
 
+  const [active, setActive] = useState(0);
+  const clickHandler = (id) => {
+    setActive(id);
+  };
   return (
-    <div className="container">
+    <div className={`${variant}`}>
       {DataList.map((item) => {
         return (
-          <div key={item.id} className="Wrapper">
-            <ul className="ProgressBar">
-              <li onClick={() => clickHandler(item.id)}>{item.name}</li>
-              <li className="label">{item.Designation}</li>
-            </ul>
+          <div key={item.id}>
+            <div className="Box" onClick={() => clickHandler(item.id)}>
+              <div className={active >= item.id ? "activeBox" : "inactiveBox"}></div>
+            </div>
 
-            <div className="checkBoxWrapper">
-              {active >= item.id ? <div className="innerbox"></div> : ""}
+            <div>
+              <ul className="ProgressBar">
+                <li>{item.name}</li>
+                <li className="label">{item.Designation}</li>
+              </ul>
             </div>
           </div>
         );
@@ -44,4 +50,7 @@ const ProgressIndicator = ({ clickHandler, active }) => {
   );
 };
 
+ProgressIndicator.defaultProps = {
+  variant: "horizontal",
+};
 export default ProgressIndicator;

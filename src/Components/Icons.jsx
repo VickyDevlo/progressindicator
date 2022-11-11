@@ -7,8 +7,10 @@ const Icons = ({ children, variant }) => {
     <>
       <div className="Line"></div>
       <div className="childWrapper">
-        <ul className="iconBar">
-          <li className={`iconList ${variant}`}>{children}</li>
+        <ul className="iconBar"
+          
+        >
+          <li className={`iconList ${variant}`}  >{children}</li>
         </ul>
       </div>
     </>
