@@ -5,10 +5,7 @@
 
 }
 
-.vertical {
-    line-height: 25px;
-    position: relative
-}
+ 
 
 .horizontal::before {
     content: "";
@@ -28,14 +25,16 @@
     position: absolute;
     z-index: -1;
     background-color: #706e6e;
-    top: 106px;
-    left: 570px;
+    top: 173px;
+    left: 650px;
+    /* top: 106px;
+    left: 570px; */
 }
 
 .label {
     color: grey;
-} 
- 
+}
+
 .progressBar li {
     list-style: none;
     text-align: center;
@@ -57,10 +56,10 @@
     height: 50px;
     border-radius: 50%;
     background-color: rgb(216, 216, 216);
-    position: relative;  
+    position: relative;
     top: 57px;
     left: 546px;
-  
+
 }
 
 .activeBox {

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import "./ProgressIndicator.css";
 
 const ProgressIndicator = ({ variant }) => {
+  
   const DataList = [
     {
       id: 1,
@@ -24,7 +26,7 @@ const ProgressIndicator = ({ variant }) => {
     },
   ];
 
-  const [active, setActive] = useState(1);
+  const [active, setActive] = useState(2);
 
   const onClickHandler = (id) => {
     setActive(id);
@@ -57,4 +59,9 @@ const ProgressIndicator = ({ variant }) => {
 ProgressIndicator.defaultProps = {
   variant: "horizontal",
 };
+
+ProgressIndicator.propTypes = {
+  variant: PropTypes.oneOf(["horizontal", "vertical"]),
+};
+
 export default ProgressIndicator;
