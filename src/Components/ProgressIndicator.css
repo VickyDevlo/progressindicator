@@ -36,13 +36,17 @@
     color: grey;
 }
 
-.ProgressBar li {
+.progressBar  {
+    position: relative;
+    top: -8px;
+}
+.progressBar li {
     list-style: none;
     text-align: center;
 }
 
 
-.Box {
+.box {
     width: 50px;
     height: 50px;
     background-color: rgb(216, 216, 216);
@@ -52,7 +56,7 @@
     left: 70px;
 }
 
-.vertical .Box {
+.vertical .box {
     width: 50px;
     height: 50px;
     border-radius: 50%;

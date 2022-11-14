@@ -29,19 +29,20 @@ const ProgressIndicator = ({ variant }) => {
   const onClickHandler = (id) => {
     setActive(id);
   };
+
   return (
     <div className={`${variant}`}>
       {DataList.map((item) => {
         return (
           <div key={item.id}>
-            <div className="Box" onClick={() => onClickHandler(item.id)}>
+            <div className="box" onClick={() => onClickHandler(item.id)}>
               <div
                 className={active >= item.id ? "activeBox" : "inactiveBox"}
               />
             </div>
 
             <div>
-              <ul className="ProgressBar">
+              <ul className="progressBar">
                 <li>{item.name}</li>
                 <li className="label">{item.Designation}</li>
               </ul>
