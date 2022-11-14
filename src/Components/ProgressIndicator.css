@@ -24,22 +24,18 @@
 .vertical::before {
     content: "";
     min-width: 2px;
-    height: 379px;
+    height: 347px;
     position: absolute;
     z-index: -1;
     background-color: #706e6e;
-    top: 91px;
+    top: 106px;
     left: 572px;
 }
 
 .label {
     color: grey;
-}
-
-.progressBar  {
-    position: relative;
-    top: -8px;
-}
+} 
+ 
 .progressBar li {
     list-style: none;
     text-align: center;
@@ -61,9 +57,10 @@
     height: 50px;
     border-radius: 50%;
     background-color: rgb(216, 216, 216);
-    position: relative;
-    bottom: -53px;
-    left: 547px;
+    position: relative;  
+    top: 57px;
+    left: 546px;
+  
 }
 
 .activeBox {
