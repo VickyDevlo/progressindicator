@@ -24,17 +24,20 @@ const ProgressIndicator = ({ variant }) => {
     },
   ];
 
-  const [active, setActive] = useState(0);
-  const clickHandler = (id) => {
+  const [active, setActive] = useState(1);
+
+  const onClickHandler = (id) => {
     setActive(id);
   };
   return (
-    <div className={`${variant}`}> 
+    <div className={`${variant}`}>
       {DataList.map((item) => {
         return (
           <div key={item.id}>
-            <div className="Box" onClick={() => clickHandler(item.id)}>
-              <div className={active >= item.id ? "activeBox" : "inactiveBox"}></div>
+            <div className="Box" onClick={() => onClickHandler(item.id)}>
+              <div
+                className={active >= item.id ? "activeBox" : "inactiveBox"}
+              />
             </div>
 
             <div>
